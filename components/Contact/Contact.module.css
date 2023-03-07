@@ -1,0 +1,26 @@
+.Contact {
+  background-color: #007f5f;
+  padding: 70px;
+  text-align: center;
+}
+
+.Contact h1 {
+  font-size: 4rem;
+  font-family: "Pacifico", cursive;
+  color: white;
+}
+
+.textarea {
+  margin: 20px 0px;
+  width: 30%;
+  height: 200px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+
+}
+
+.button {
+    color: #007f5f;
+    background-color: white;
+    width: 30%;
+}

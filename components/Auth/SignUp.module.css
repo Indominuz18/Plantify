@@ -1,0 +1,14 @@
+.signup {
+  text-align: center;
+}
+
+.signup h1 {
+  font-family: "Pacifico", cursive;
+  color: #007f5f;
+  font-size: 3rem;
+  margin: 50px;
+}
+
+.signup input {
+  border: 1px solid #007f5f;
+}

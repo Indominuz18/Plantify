@@ -1,0 +1,26 @@
+.image {
+  float: left;
+  height: 120px;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.news_card {
+  width: 50%;
+  height: 60%;
+  padding: 0px;
+}
+
+.heading {
+  float: left;
+  margin: 0px;
+  margin-left: 20px;
+}
+
+.description {
+  display: block;
+  margin: 0px;
+}
+
+.link {
+  text-decoration: none;
+}

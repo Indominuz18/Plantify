@@ -1,0 +1,29 @@
+.image{
+    height: 60%;
+    margin: 0px;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+}
+
+.title{
+    margin: 20px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.ProductCard{
+    margin: 50px;
+    padding: 0px;
+    height: 500px;
+    text-align: center;
+    width: 20%;
+}
+
+.description{
+    font-size: 13px;
+    margin: 20px;
+    color: grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
