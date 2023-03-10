@@ -47,7 +47,7 @@ export default function SignUp(props) {
         onChange={(e) => setCPassword(e.target.value)}
       />{" "}
       <br />
-      <Button onClick={submitHandler}>Submit</Button>
+      <Button className={classes.button} onClick={submitHandler}>Submit</Button>
     </div>
   );
 }

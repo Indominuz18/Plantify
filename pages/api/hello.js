@@ -55,7 +55,7 @@ const url =
 
 export default async function getAllProducts(req, res) {
   const client = await MongoClient.connect(url);
-  const db = client.db();
+  const db = client.db("Plantify");
 
   const productCollection = db.collection("products");
 
@@ -71,5 +71,5 @@ export default async function getAllProducts(req, res) {
     };
   });
   client.close();
-  res.status(201).send(final_products)
+  res.status(201).send(final_products);
 }

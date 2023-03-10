@@ -4,23 +4,17 @@ import Button from "../UI/Button";
 import Link from "next/link";
 import axios from "axios";
 
-export default function Login() {
+export default function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   async function submitHandler() {
-    const res = await axios.post("../../pages/api/login", {
+    const data = {
       email: email,
-      password: password
-    });
+      password: password,
+    };
 
-    if(res.status === 200)
-    {
-      console.log(res.message)
-    }else{
-      console.log("logged in")
-    }
-
+    props.login(data)
   }
 
   return (

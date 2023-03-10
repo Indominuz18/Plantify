@@ -12,3 +12,7 @@
 .signup input {
   border: 1px solid #007f5f;
 }
+
+.button{
+  width: 30%;
+}
