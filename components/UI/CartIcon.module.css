@@ -1,0 +1,10 @@
+.cart{
+    width: 3%;
+    color: #007f5f;
+    background-color: white;
+    padding: 7px;
+    font-size: 1.3rem;
+    border: 1px solid #007f5f;
+    border-radius: 20%;
+    box-shadow: 5px 5px 5px 5px grey;
+}

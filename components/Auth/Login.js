@@ -2,10 +2,26 @@ import React, { useState } from "react";
 import classes from "./Login.module.css";
 import Button from "../UI/Button";
 import Link from "next/link";
+import axios from "axios";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  async function submitHandler() {
+    const res = await axios.post("../../pages/api/login", {
+      email: email,
+      password: password
+    });
+
+    if(res.status === 200)
+    {
+      console.log(res.message)
+    }else{
+      console.log("logged in")
+    }
+
+  }
 
   return (
     <div className={classes.login}>
@@ -29,10 +45,12 @@ export default function Login() {
         <p>Remember me</p>
       </div>
       <div className={classes.container}>
-        <Button className={classes.submit}>Submit</Button>
-        
-          <Button className={classes.signup}><Link href="/signup">SignUp</Link></Button>
-        
+        <Button onClick={submitHandler} className={classes.submit}>
+          Submit
+        </Button>
+        <Button className={classes.signup}>
+          <Link href="/signup">SignUp</Link>
+        </Button>
       </div>
     </div>
   );

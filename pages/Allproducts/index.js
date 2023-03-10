@@ -1,38 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AllProducts from "@/components/AllProducts/AllProducts";
-import { MongoClient } from "mongodb";
+// import { MongoClient } from "mongodb";
+// import { getAllProducts } from "../api/hello";
 
-const url =
-  "mongodb+srv://ManmeetSingh:gPjevGaFNXWdT1ID@cluster1.8x4f1.mongodb.net/?retryWrites=true&w=majority";
+// const url =
+//   "mongodb+srv://ManmeetSingh:gPjevGaFNXWdT1ID@cluster1.8x4f1.mongodb.net/?retryWrites=true&w=majority";
 
 export default function Allproducts(props) {
-  return <AllProducts products={props.products} />;
+  const [products, setProducts] = useState([]);
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const final_products = await fetch("../api/hello");
+
+  //     console.log(final_products);
+
+  //     setProducts(final_products);
+  //   }
+  //   fetchData();
+  // });
+
+  return <AllProducts />;
 }
-
-// export async function getStaticProps() {
-//   const client = await MongoClient.connect(url);
-//   const db = client.db();
-
-//   const productCollection = db.collection("products");
-
-//   const products = await productCollection.find().toArray();
-
-//   // const final_products = JSON.stringify(products).toArray()
-
-//   const final_products = products.map((product) => {
-//     return {
-//       id: product._id.toString(),
-//       title: product.title,
-//       description: product.description,
-//       img: product.img,
-//       price: product.price,
-//     };
-//   });
-
-//   console.log(final_products);
-
-//   return {
-//     props: final_products,
-//     revalidate: 1,
-//   };
-// }

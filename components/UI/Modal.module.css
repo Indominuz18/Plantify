@@ -13,8 +13,8 @@
 
 .modal {
   background-color: white;
-  width: 60%;
-  height: 50%;
+  width: 40%;
+  height: 70%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -24,19 +24,12 @@
   z-index: 100;
   border-radius: 15px;
   padding: 20px;
+
 }
 
-.img {
-  height: 90%;
-  width: 90%;
-}
-
-.img_div {
-  float: left;
-  width: 50%;
-}
-
-.info_div {
-  float: right;
-  width: 50%;
+.modal h1{
+  color: #007f5f;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  text-align: center;
 }

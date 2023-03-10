@@ -1,8 +1,19 @@
+import { authActions } from "@/store/auth-slice";
 import Link from "next/link";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Button from "../UI/Button";
 import classes from "./MainHeader.module.css";
 
 export default function MainHeader() {
+
+  const isloggedIn = useSelector((state) => state.auth.isloggedIn)
+  const dispatch = useDispatch()
+  function loggoutHandler()
+  {
+    dispatch(authActions.logOut())
+  }
+
   return (
     <nav className={classes.navbar}>
       <Link href="/">
@@ -18,9 +29,15 @@ export default function MainHeader() {
         <Link className={classes.link} href="/Newsletter">
           Newsletter
         </Link>
-        <Link className={classes.link} href="/Login">
+        {!isloggedIn && <Link className={classes.link} href="/Login">
           Login
-        </Link>
+        </Link>}
+        {isloggedIn && <Link className={classes.link} href="/Profile">
+          Profile
+        </Link>}
+        {isloggedIn && <Button onClick={loggoutHandler} className={classes.button}>
+          Logout
+        </Button>}
       </div>
     </nav>
   );

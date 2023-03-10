@@ -1,0 +1,40 @@
+.ProductCart {
+  width: 100%;
+  margin: 10px 0px;
+  border: 1px solid #007f5f;
+  border-radius: 10px;
+  height: 8rem;
+}
+
+.ProductCart img {
+  width: 25%;
+  border-radius: 10px;
+  float: left;
+  margin: 10px;
+}
+
+.info {
+  text-align: none;
+}
+
+.product_name {
+  float: left;
+  font-size: 1.5rem;
+  margin: 10px 0px;
+}
+
+.price {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 10px 0px;
+  position: relative;
+  bottom: 0;
+}
+
+.input {
+  width: 5%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #007f5f;
+  font-size: 1.2rem;
+}
