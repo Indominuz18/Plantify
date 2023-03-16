@@ -3,6 +3,7 @@ import Login from "@/components/Auth/Login";
 import { useDispatch } from "react-redux";
 import { profileActions } from "@/store/profile-slice";
 import { useRouter } from "next/router";
+import { authActions } from "@/store/auth-slice";
 
 export default function LoginPage() {
   const dispatch = useDispatch();
@@ -16,12 +17,14 @@ export default function LoginPage() {
       },
     });
 
-    if (res.status === 200) {
-      console.log(res.message);
+    if (res.status == 200) {
+      const data = await res.json();
+      console.log(data);
     } else {
-      const data = res.json();    // problem here
       router.push("/");
+      const data = await res.json(); // problem here
       dispatch(profileActions.setUser({ name: data.name, email: data.email }));
+      dispatch(authActions.logIn());
     }
   }
 

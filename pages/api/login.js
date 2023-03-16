@@ -17,7 +17,7 @@ export default async function Login(req, res) {
       const user_password = user.password;
       const verify_password = await bcrypt.compare(data.password, user_password);
       if (verify_password) {
-        res.json({name: user.name, email: user.email})
+        res.status(201).json({name: user.name, email: user.email})
         // res.status(201).json({ message: "Logged in!" });
       } else {
         res.status(200).json({ message: "Invalid Password" });

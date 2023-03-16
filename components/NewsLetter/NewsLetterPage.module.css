@@ -1,0 +1,21 @@
+.news{
+    text-align: center;
+    
+}
+
+.heading{
+    font-family: 'Pacifico', cursive;
+    color: #007f5f;
+    margin: 80px 0px;
+    font-size: 3rem;
+}
+
+.news img{
+    border-radius: 20px;
+    width: 40%;
+}
+
+.news p{
+    margin: 20px 0px;
+    
+}

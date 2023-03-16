@@ -8,22 +8,31 @@
 .title{
     margin: 20px;
     margin-bottom: 0px;
-    font-size: 15px;
+    font-size: 2rem;
+    color: #007f5f;
+    font-family: 'Pacifico', cursive;
 }
 
 .ProductCard{
     margin: 50px;
     padding: 0px;
-    height: 500px;
+    height: 35rem;
     text-align: center;
-    width: 20%;
+    width: 23%;
+    border: 1px solid #007f5f;
 }
 
 .description{
     font-size: 13px;
-    margin: 20px;
+    margin: 10px 20px;
     color: grey;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.price{
+    color: #007f5f;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
 }

@@ -5,6 +5,7 @@ import CartIcon from "../UI/CartIcon";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../UI/Modal";
 import { uiActions } from "@/store/ui-slice";
+import SearchBar from "../UI/SearchBar";
 
 export default function AllProducts(props) {
   const showCart = useSelector((state) => state.ui.showCart);
@@ -22,6 +23,7 @@ export default function AllProducts(props) {
       </div>
 
       {showCart && <Modal onClick={handleModal} />}
+      <SearchBar />
       <h1 className={classes.heading}>Explore!</h1>
       <div className={classes.products}>
         {

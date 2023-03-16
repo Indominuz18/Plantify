@@ -3,12 +3,15 @@ import classes from "./Login.module.css";
 import Button from "../UI/Button";
 import Link from "next/link";
 import axios from "axios";
+import Loader from "../UI/Loader";
 
 export default function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [submitted, setSubmitted] = useState(false)
 
   async function submitHandler() {
+    setSubmitted(true)
     const data = {
       email: email,
       password: password,
@@ -39,11 +42,11 @@ export default function Login(props) {
         <p>Remember me</p>
       </div>
       <div className={classes.container}>
-        <Button onClick={submitHandler} className={classes.submit}>
-          Submit
+        <Button disabled={submitted} onClick={submitHandler} className={classes.submit}>
+          {submitted ? <Loader /> : "Submit"}
         </Button>
         <Button className={classes.signup}>
-          <Link href="/signup">SignUp</Link>
+          <Link href="/signup">Sign Up</Link>
         </Button>
       </div>
     </div>

@@ -11,7 +11,7 @@ export default function CartIcon(props) {
 
   return (
     <div onClick={cartHandler} className={`${props.className} ${classes.cart}`}>
-      <i class="fa-solid fa-cart-shopping"></i>
+      <i className="fa-solid fa-cart-shopping"></i>
     </div>
   );
 }

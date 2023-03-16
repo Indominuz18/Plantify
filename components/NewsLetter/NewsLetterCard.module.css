@@ -1,6 +1,6 @@
 .image {
   float: left;
-  height: 120px;
+  width: 32%;
   border-radius: 20px 0px 0px 20px;
 }
 
@@ -11,16 +11,23 @@
 }
 
 .heading {
+  font-size: 2rem;
   float: left;
   margin: 0px;
   margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 .description {
-  display: block;
+  display: inline-block;
   margin: 0px;
 }
 
 .link {
   text-decoration: none;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
 }
